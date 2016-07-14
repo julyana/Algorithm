@@ -8,6 +8,9 @@ using namespace std;
 /********Declaration********/
 int a[nSize], b[nSize], t, len;
 
+/********Solution********/
+//Reference : http://blog.csdn.net/yuzhiyuxia/article/details/38360353
+
 void input(){
   cin >> len;
   for(int i = 0; i < len; i ++) {
@@ -58,7 +61,7 @@ void cycleLeader(int *a,int from, int mod) {
 }
 
 //循环右移num位 时间复杂度O(n)
-void right_rotate(int *a, int num, int n) {
+void rightRotate(int *a, int num, int n) {
     reverse(a, 1, n - num);
     reverse(a, n - num + 1,n);
     reverse(a, 1, n);
@@ -76,11 +79,11 @@ void perfectShuffle(int *a, int n) {
 	m /= 2;
 	
         // step 2
-        right_rotate(a + m, m, n);
+        rightRotate(a + m, m, n);
 	
         // step 3
         for (i = 0, t = 1; i < k; ++i, t *= 3) {
-            cycle_leader(a , t, m * 2 + 1);    
+            cycleLeader(a , t, m * 2 + 1);    
         }
 	
         //step 4
