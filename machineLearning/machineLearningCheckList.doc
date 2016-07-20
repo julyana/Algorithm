@@ -1,5 +1,5 @@
 1. C4.5, ID3(信息增益率)
-2. K-Means
+2. K-Means(EM, 极大似然估计)
 3. Support Vector Machine
 4. The Apriori algorithm
 5. Expectation–Maximization
